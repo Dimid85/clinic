@@ -1,0 +1,200 @@
+@import 'vars';
+
+.divImg {
+    margin-right: 10px;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.item:not(:last-child) {
+    margin-right: 10px;
+}
+.link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #071C4A;
+    font-family: 'FontAwesome';
+    font-weight: 400;
+    font-size: calcFluidFontSize(14, 20, 420, 1440);
+    line-height: 23px;
+    &:hover {
+        color: #52A958;
+    }
+}
+.phone {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: calcFluidFontSize(14, 20, 420, 1440);
+    line-height: 27px;
+    color: #52A958;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.btn {
+    max-width: 110px;
+    width: 100%;
+    height: 50px;
+    background: #2D4F9C;
+    border-radius: 20px 0px 10px;
+    border: none;
+    cursor: pointer;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+.header {
+    &First {
+        padding: 54px 0 36.16px;
+        border-bottom: 1px solid #52A958;
+    }
+}
+.wrapper {
+    padding-right: 20px;
+}
+.label {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        bottom: 0;
+        width: 16px;
+        height: 22px;
+    }
+}
+.listInputs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 50px;
+}
+.blockNav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    justify-content: space-between;
+}
+.input {
+    max-width: 300px;
+    width: 100%;
+    font-size: calcFluidFontSize(14, 18, 420, 1440);
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.6);
+    outline: none;
+    padding: 9px 30px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    &:hover,
+    &:active,
+    &:focus {
+        border-bottom: 1px solid #52A958;
+        box-shadow: 0px 1px 1px rgba(82, 169, 88, 0.25);
+    }
+}
+.itemInputs:not(:last-child) .input {
+    margin-right: 15px;
+}
+.itemInputs:first-child > .label::before {
+    width: 20px;
+    background: url(../img/svg/user.svg);
+}
+.itemInputs:nth-child(2) > .label::before {
+    height: 18px;
+    background: url(../img/svg/stetoskop.svg);
+}
+.itemInputs:last-child > .label::before {
+    background: url(../img/svg/clinic.svg);
+}
+.container {
+    padding: 37px 15px 32px;
+}
+.hr {
+    margin: 0;
+    background: #2D4F9C;
+    height: 4px;
+    box-shadow: 0px 2px 2px #2D4F9C;
+}
+@media (max-width: 1400px) {
+    .headerFirst {
+        padding: 31px 0 34px;
+    }
+    .container {
+        padding: 15px;
+    }
+}
+@media (max-width: 1200px) {
+    .blockNav {
+        flex-direction: column;
+        height: 80px;
+        width: min-content;
+        align-items: flex-end;
+    }
+    .phone {
+        order: 2;
+    }
+    .listInputs {
+        margin-right: 30px;
+    }
+}
+@media (max-width: 1024px) {
+    .blockNav {
+        align-items: center;
+        flex-direction: row;
+        height: fit-content;
+        width: -webkit-fill-available;
+        max-width: 350px;
+    }
+    .phone {
+        order: inherit;
+    }
+    .list {
+        display: none;
+    }
+    .divImg {
+        margin-right: 20px;
+    }
+    .listInputs {
+        column-gap: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .hr {
+        display: none;
+    }
+    .listInputs {
+        display: none;
+    }
+    .wrapper {
+        padding-right: 0;
+    }
+    .headerFirst {
+        border-bottom: none;
+        padding: 31px 0 0;
+    }
+    .container {
+        padding: 34px 24px;
+    }
+}
+@media (max-width: 640px) {
+    .phone {
+        display: none;
+    }
+    .btn {
+        margin-right: 20px;
+    }
+    .blockNav {
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 520px) {
+    .btn {
+        display: none;
+    }
+}
